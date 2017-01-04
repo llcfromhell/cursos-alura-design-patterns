@@ -1,4 +1,4 @@
-package br.com.alura.strategy;
+package strategy;
 
 import org.junit.Assert;
 import org.junit.Test;

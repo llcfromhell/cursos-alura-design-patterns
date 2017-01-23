@@ -1,7 +1,12 @@
-package chainOfResponsability;
+package chainOfResponsability.desconto;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import chainOfResponsability.desconto.DescontoValorMaiorQueQuinhentos;
+import chainOfResponsability.desconto.Item;
+import chainOfResponsability.desconto.Orcamento;
+import chainOfResponsability.desconto.SemDesconto;
 
 public class DescontoValorMaiorQueQuinhentosTest {
 

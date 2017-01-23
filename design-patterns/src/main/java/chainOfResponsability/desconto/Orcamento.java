@@ -1,4 +1,4 @@
-package chainOfResponsability;
+package chainOfResponsability.desconto;
 
 import java.util.ArrayList;
 import java.util.Arrays;

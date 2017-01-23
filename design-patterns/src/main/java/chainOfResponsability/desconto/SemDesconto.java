@@ -1,4 +1,4 @@
-package chainOfResponsability;
+package chainOfResponsability.desconto;
 
 public class SemDesconto implements Desconto {
 

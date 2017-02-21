@@ -1,11 +1,13 @@
 package strategy;
 
+import common.Orcamento;
+
 public class Iccc implements Imposto {
 
 	@Override
 	public double calculaAPartirDo(Orcamento orcamento) {
 		
-		double valor = orcamento.getValor();
+		double valor = orcamento.getValorOrcamento();
 		double impostoCalculado = 0.00;
 		
 		if (valor < 1000.00) impostoCalculado = valor * 0.05;

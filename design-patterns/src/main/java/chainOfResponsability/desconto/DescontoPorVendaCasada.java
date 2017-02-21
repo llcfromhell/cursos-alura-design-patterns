@@ -2,6 +2,9 @@ package chainOfResponsability.desconto;
 
 import java.util.Arrays;
 
+import common.Item;
+import common.Orcamento;
+
 public class DescontoPorVendaCasada implements Desconto{
 
 	private Desconto proximo;

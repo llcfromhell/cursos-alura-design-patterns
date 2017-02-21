@@ -1,5 +1,7 @@
 package strategy;
 
+import common.Orcamento;
+
 public class CalculadorDeImposto {
 
 	private Imposto imposto;

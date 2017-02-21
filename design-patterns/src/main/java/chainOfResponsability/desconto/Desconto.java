@@ -1,5 +1,7 @@
 package chainOfResponsability.desconto;
 
+import common.Orcamento;
+
 public interface Desconto {
 	
 	public double aplicaDesconto(Orcamento orcamento);

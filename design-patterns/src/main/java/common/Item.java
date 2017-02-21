@@ -1,4 +1,5 @@
-package chainOfResponsability.desconto;
+package common;
+
 
 public class Item {
 
@@ -15,11 +16,15 @@ public class Item {
 	public double getValor() {
 		return valor;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(valor);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
 	@Override
@@ -36,9 +41,9 @@ public class Item {
 				return false;
 		} else if (!descricao.equals(other.descricao))
 			return false;
+		if (Double.doubleToLongBits(valor) != Double.doubleToLongBits(other.valor))
+			return false;
 		return true;
 	}
-	
-	
 	
 }

@@ -1,5 +1,7 @@
 package chainOfResponsability.desconto;
 
+import common.Orcamento;
+
 public class DescontoAcimaDeCindoItens implements Desconto {
 
 	Desconto proximo;

@@ -2,9 +2,18 @@ package strategy;
 
 import common.Orcamento;
 
-public class Icms implements Imposto {
+public class Icms extends Imposto {
 
-	public double calculaAPartirDo(Orcamento orcamento) {
+	public Icms(Imposto outroImposto) {
+		super(outroImposto);
+	}
+
+	public Icms() {
+		super();
+	}
+
+	@Override
+	public double calculaImpostoDo(Orcamento orcamento) {
 		return orcamento.getValorOrcamento() * 0.01;
 	}
 

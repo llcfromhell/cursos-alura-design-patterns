@@ -1,5 +1,7 @@
 package chainOfResponsability.requisicao;
 
+import common.Conta;
+
 public interface Resposta {
 
 	String responde(Requisicao req, Conta conta);

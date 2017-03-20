@@ -1,5 +1,7 @@
 package chainOfResponsability.requisicao;
 
+import common.Conta;
+
 public class RespostaXml implements Resposta {
 
 	Resposta proxima;

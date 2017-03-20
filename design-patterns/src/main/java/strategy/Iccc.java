@@ -2,10 +2,19 @@ package strategy;
 
 import common.Orcamento;
 
-public class Iccc implements Imposto {
+public class Iccc extends Imposto {
+
+	
+	public Iccc(Imposto outroImposto) {
+		super(outroImposto);
+	}
+
+	public Iccc() {
+		super();
+	}
 
 	@Override
-	public double calculaAPartirDo(Orcamento orcamento) {
+	public double calculaImpostoDo(Orcamento orcamento) {
 		
 		double valor = orcamento.getValorOrcamento();
 		double impostoCalculado = 0.00;

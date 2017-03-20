@@ -2,6 +2,10 @@ package chainOfResponsability.requisicao;
 
 import org.junit.Test;
 
+import common.Conta;
+
+import java.util.Date;
+
 import org.junit.Assert;
 
 public class TestaRespostaRequisicao {
@@ -14,7 +18,7 @@ public class TestaRespostaRequisicao {
 	public void testaQueRespondeXml() {
 		RespostaXml respXml = new RespostaXml();
 		Requisicao req = new Requisicao(Formato.XML);
-		Conta conta = new Conta("Matt Heafy", 666.00);
+		Conta conta = new Conta("Matt Heafy", 666.00, new Date());
 		Assert.assertEquals(contaXml, respXml.responde(req, conta));
 	}
 	
@@ -22,7 +26,7 @@ public class TestaRespostaRequisicao {
 	public void testaQueRespondeCsv() {
 		RespostaCsv respCsv = new RespostaCsv();
 		Requisicao req = new Requisicao(Formato.CSV);
-		Conta conta = new Conta("Adrian Smith", 666.00);
+		Conta conta = new Conta("Adrian Smith", 666.00, new Date());
 		Assert.assertEquals(contaCsv, respCsv.responde(req, conta));
 	}
 	
@@ -30,7 +34,7 @@ public class TestaRespostaRequisicao {
 	public void testaQueRespondePorcento() {
 		RespostaPorCento respPorCento = new RespostaPorCento();
 		Requisicao req = new Requisicao(Formato.PORCENTO);
-		Conta conta = new Conta("Andy Black", 666.00);
+		Conta conta = new Conta("Andy Black", 666.00, new Date());
 		Assert.assertEquals(contaPorCento, respPorCento.responde(req, conta));
 	}
 	
@@ -44,15 +48,15 @@ public class TestaRespostaRequisicao {
 		respPorCento.setProxima(respCsv);
 
 		Requisicao reqPorcento = new Requisicao(Formato.PORCENTO);
-		Conta conta1 = new Conta("Andy Black", 666.00);
+		Conta conta1 = new Conta("Andy Black", 666.00, new Date());
 		Assert.assertEquals(contaPorCento, respXml.responde(reqPorcento, conta1));
 		
 		Requisicao reqCsv = new Requisicao(Formato.CSV);
-		Conta conta2 = new Conta("Adrian Smith", 666.00);
+		Conta conta2 = new Conta("Adrian Smith", 666.00, new Date());
 		Assert.assertEquals(contaCsv, respXml.responde(reqCsv, conta2));
 		
 		Requisicao reqXml = new Requisicao(Formato.XML);
-		Conta conta3 = new Conta("Matt Heafy", 666.00);
+		Conta conta3 = new Conta("Matt Heafy", 666.00, new Date());
 		Assert.assertEquals(contaXml, respXml.responde(reqXml, conta3));
 		
 	}

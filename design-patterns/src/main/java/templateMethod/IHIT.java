@@ -1,8 +1,5 @@
 package templateMethod;
 
-import java.util.function.Predicate;
-
-import common.Item;
 import common.Orcamento;
 
 public class IHIT extends TemplateImpostoCondicional {

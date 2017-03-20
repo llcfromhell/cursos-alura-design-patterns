@@ -1,10 +1,19 @@
 package templateMethod;
 
 import common.Orcamento;
+import strategy.Imposto;
 
 public class IKCV extends TemplateImpostoCondicional {
 
 	
+	public IKCV(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	public IKCV() {
+		super();
+	}
+
 	@Override
 	public boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
 		

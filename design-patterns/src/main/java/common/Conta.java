@@ -9,7 +9,25 @@ public class Conta {
 	private String titular;
 	private double saldo;
 	private Date dataAbertura;
+	private String agencia;
+	private String numeroConta;
 	
+	public Conta(String titular, double saldo) {
+		this(titular, saldo, null, null, null);
+	}
+	
+	public Conta(String titular, double saldo, String agencia, String numeroConta) {
+		this(titular, saldo, null, agencia, numeroConta);
+	}
+	
+	public Conta(String titular, double saldo, Date dataAbertura, String agencia, String numeroConta) {
+		this.titular = titular;
+		this.saldo = saldo;
+		this.dataAbertura = dataAbertura;
+		this.agencia = agencia;
+		this.numeroConta = numeroConta;
+	}
+
 	public Conta(String titular, double saldo, Date dataAbertura) {
 		this.titular = titular;
 		this.saldo = saldo;
@@ -76,6 +94,14 @@ public class Conta {
 		} else if (!titular.equals(other.titular))
 			return false;
 		return true;
+	}
+
+	public String getAgencia() {
+		return agencia;
+	}
+
+	public String getNumeroConta() {
+		return numeroConta;
 	}
 
 	

@@ -3,13 +3,26 @@ package templateMethod;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import chainOfResponsability.requisicao.Conta;
+import common.Conta;
 
 public class RelatorioComplexo extends Relatorio {
 
 	@Override
 	protected void imprimeCabecalho() {
+		
 		StringBuilder sb = new StringBuilder();
+		sb.append("------------------------------------------");
+		System.out.println(sb);
+		
+		sb = new StringBuilder();
+		sb.append("Relatório Complexo");
+		System.out.println(sb);
+		
+		sb = new StringBuilder();
+		sb.append("------------------------------------------");
+		System.out.println(sb);
+		
+		sb = new StringBuilder();
 		sb.append("Banco: ");
 		sb.append(this.banco.getNome());
 		sb.append(" - ");
@@ -43,6 +56,11 @@ public class RelatorioComplexo extends Relatorio {
 		sb.append(new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date()));
 		
 		System.out.println(sb);
+		
+		sb = new StringBuilder();
+		sb.append("------------------------------------------");
+		System.out.println(sb);
+		
 	}
 	
 	private void imprimeDadosConta(Conta conta) {

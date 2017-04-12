@@ -1,11 +1,24 @@
 package templateMethod;
 
-import chainOfResponsability.requisicao.Conta;
+import common.Conta;
 
 public class RelatorioSimples extends Relatorio {
 
 	@Override
 	protected void imprimeCabecalho() {
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("------------------------------------------");
+		System.out.println(sb);
+		
+		sb = new StringBuilder();
+		sb.append("Relatório Simples");
+		System.out.println(sb);
+		
+		sb = new StringBuilder();
+		sb.append("------------------------------------------");
+		System.out.println(sb);
+		
 		imprimeNomeTelefoneBanco();
 	}
 
@@ -16,7 +29,11 @@ public class RelatorioSimples extends Relatorio {
 
 	@Override
 	protected void imprimeRodape() {
+		
 		imprimeNomeTelefoneBanco();
+		StringBuilder sb = new StringBuilder();
+		sb.append("------------------------------------------");
+		System.out.println(sb);
 	}
 	
 	private void imprimeDadosConta(Conta conta) {

@@ -2,7 +2,7 @@ package templateMethod;
 
 import java.util.List;
 
-import chainOfResponsability.requisicao.Conta;
+import common.Conta;
 
 public abstract class Relatorio {
 	

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import chainOfResponsability.requisicao.Conta;
+import common.Conta;
 
 public class RelatorioSimplesTest {
 	

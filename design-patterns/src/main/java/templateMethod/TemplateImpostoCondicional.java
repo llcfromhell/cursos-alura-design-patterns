@@ -5,10 +5,18 @@ import common.Orcamento;
 import strategy.Imposto;
 
 
-public abstract class TemplateImpostoCondicional implements Imposto {
+public abstract class TemplateImpostoCondicional extends Imposto {
+
+	public TemplateImpostoCondicional(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	public TemplateImpostoCondicional() {
+		super();
+	}
 
 	@Override
-	public double calculaAPartirDo(Orcamento orcamento) {
+	public final double calculaImpostoDo(Orcamento orcamento) {
 		if (deveUsarMaximaTaxacao(orcamento)) {
 			return maximaTaxacao(orcamento);
 		} else {

@@ -1,6 +1,7 @@
 package chainOfResponsability.desconto;
 
 import java.util.Arrays;
+import java.util.function.Predicate;
 
 import common.Item;
 import common.Orcamento;
@@ -12,7 +13,14 @@ public class DescontoPorVendaCasada implements Desconto{
 	@Override
 	public double aplicaDesconto(Orcamento orcamento) {
  
-		if (orcamento.getItens().containsAll(Arrays.asList(new Item("Caneta", 0.0), new Item("Lapis", 0.0)))) {
+		
+		Long numeroCanetas = orcamento.getItensStream()
+			.filter(i -> Item.DESC_CANETA.equals(i.getDescricao())).count();		
+		
+		Long numeroLapis = orcamento.getItensStream()
+				.filter(i -> Item.DESC_LAPIS.equals(i.getDescricao())).count();
+		
+		if (numeroCanetas > 0 && numeroLapis > 0)  {
 			return orcamento.getValorOrcamento() * 0.05;
 		}
 		

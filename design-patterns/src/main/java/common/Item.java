@@ -3,6 +3,9 @@ package common;
 
 public class Item {
 
+	public final static String DESC_CANETA = "Caneta";
+	public final static String DESC_LAPIS = "Lapis";
+	
 	private String descricao;
 	private double valor;
 	

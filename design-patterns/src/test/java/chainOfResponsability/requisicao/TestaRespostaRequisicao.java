@@ -14,7 +14,7 @@ public class TestaRespostaRequisicao {
 	public void testaQueRespondeXml() {
 		RespostaXml respXml = new RespostaXml();
 		Requisicao req = new Requisicao(Formato.XML);
-		Conta conta = new Conta("Matt Heafy", 666.00);
+		Conta conta = new Conta("Matt Heafy", 666.00, "Snow", "7");
 		Assert.assertEquals(contaXml, respXml.responde(req, conta));
 	}
 	
